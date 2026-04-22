@@ -44,7 +44,8 @@
         document.body.style.overflow = '';
     }
 
-    burger.addEventListener('click', function () {
+    burger.addEventListener('click', function (e) {
+        e.stopPropagation();
         nav.classList.contains('open') ? closeNav() : openNav();
     });
 
